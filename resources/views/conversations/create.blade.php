@@ -257,6 +257,12 @@
 
 @include('partials/editor')
 
+
+@section('javascript')
+    @parent
+    mailboxConnectionInit('{{ App\Mailbox::OUT_METHOD_SMTP }}');
+@endsection
+
 @section('javascript')
     @parent
     initReplyForm(true, true, true);

@@ -89,3 +89,8 @@
         </div>
     </div>
 </div>
+
+@section('javascript')
+    @parent
+    mailboxConnectionInit('{{ App\Mailbox::OUT_METHOD_SMTP }}');
+@endsection
